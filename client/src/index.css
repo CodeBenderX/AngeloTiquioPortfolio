@@ -1,68 +1,207 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
+/* Footer styles */
+footer {
+  background: linear-gradient(
+    250deg,
+    #0078ff,
+    #00cfff,
+    #0099cc
+  ); /* Footer gradient */
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  animation: gradient-animation 18s ease infinite;
+  position: relative; /* Ensure it’s positioned relative within the layout */
+  width: 100%; /* Ensure it spans the entire width */
+  padding: 20px 0; /* Add some padding to the footer */
+  bottom: 0;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Navigation link footer styles */
+.nav-link-footer {
+  text-decoration: none;
 }
 
+.nav-link-footer:hover {
+  color: whitesmoke !important;
+}
+
+/* Animation for gradient background */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Readable font styling */
+.readable-font {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+/* Styling for navigation links */
+.nav-link {
+  color: #000000 !important;
+}
+
+.nav-link:hover {
+  color: #0056b3 !important;
+}
+
+/* Logo styling */
+.logo {
+  height: 30px;
+}
+
+/* Flexbox container to handle footer position */
+html,
 body {
+  height: 100%;
   margin: 0;
+}
+
+.page-wrapper {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes up 100% of the height */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.content-wrapper {
+  flex: 1; /* Ensures the content takes up the remaining space */
 }
 
-button {
+footer.footer {
+  margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
+/* Styling for the 'About Me' section */
+.about-container {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #87ceeb,
+    #4682b4,
+    #1e3a8a,
+    #000000
+  ); /* Blue gradient */
+  color: white;
+}
+
+.sub-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+.services-container{
+  height: 80vh;
+  background: linear-gradient(
+    to bottom,
+    #87ceeb,
+    #4682b4,
+    #1e3a8a,
+    #000000
+  ); /* Blue gradient */
+  color: Black;
+}
+
+.services-sub-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+.project-container {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #87ceeb,
+    #4682b4,
+    #1e3a8a,
+    #000000
+  ); /* Blue gradient */
+  color: white;
+}
+
+.project-sub-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-section {
+  background-color: #f8f9fa;
+  padding: 20px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.about-section h3,
+.about-section h4 {
+  margin-top: 20px;
+}
+
+/* Styling for the buttons */
+.btn-contact,
+.btn-skills {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.btn-contact {
+  background-color: #0078ff !important;
+  color: #fff;
+}
+
+.btn-contact:hover {
+  background-color: #0056b3 !important;
+  color: #fff !important;
+}
+
+.btn-skills {
+  background-color: #00cfff !important;
+  color: #fff;
+}
+
+.btn-skills:hover {
+  background-color: #0099cc;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 15px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  .col-md-6 {
+    margin-bottom: 20px;
   }
 }
