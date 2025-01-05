@@ -1,12 +1,11 @@
 /* General Styling */
 .home-container {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #87CEEB, #4682B4, #1E3A8A, #000000); /* Blue gradient */
     color: white;
   }
   
@@ -66,16 +65,25 @@
   
   .badge-container {
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
   }
   
   .badge {
-    background: #87CEEB;
-    color: black !important;
+    color: whitesmoke !important;
     padding: 0.5rem 1rem !important;
     border-radius: 20px;
     font-size: 1rem !important;
     font-weight: bold;
+    min-width: 200px; /* Ensure consistent size for smooth transition */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
   }
+  
   
   /* Content Section */
   .content-section {

@@ -1,26 +1,32 @@
 /* Footer styles */
-footer {
-  background: linear-gradient(
-    250deg,
-    #0078ff,
-    #00cfff,
-    #0099cc
-  ); /* Footer gradient */
-  color-scheme: light dark;
-  animation: gradient-animation 18s ease infinite;
-  position: relative; /* Ensure it’s positioned relative within the layout */
-  width: 100%; /* Ensure it spans the entire width */
-  padding: 20px 0; /* Add some padding to the footer */
-  bottom: 0;
+.footer-container {
+  color: white; /* Text color */
+  margin-top: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.509);
+  width: 100%; /* Occupy the full width of the body */
+  padding: 20px 0; /* Padding for spacing */
+  position: relative; /* Ensure the footer stays in its proper layout */
+  bottom: 0; /* Stick the footer at the bottom */
+  margin: 0; /* Remove any extra margin */
+}
+
+.sub-footer-container {
+  width: 80%; /* Content occupies 80% of the width */
+  margin: 0 auto; /* Center the content horizontally */
+  display: flex; /* Use flex for layout control */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-between; /* Space out content evenly */
+  align-items: center; /* Vertically center the content */
 }
 
 /* Navigation link footer styles */
 .nav-link-footer {
   text-decoration: none;
+  color:#fff !important;
 }
 
 .nav-link-footer:hover {
-  color: whitesmoke !important;
+  color:#0078ff !important;
 }
 
 /* Animation for gradient background */
@@ -60,8 +66,15 @@ footer {
 /* Flexbox container to handle footer position */
 html,
 body {
-  height: 100%;
+  height: auto;
   margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #87ceeb,
+    #4682b4,
+    #1e3a8a,
+    #000000
+  ); /* Blue gradient */
 }
 
 .page-wrapper {
@@ -72,10 +85,6 @@ body {
 
 .content-wrapper {
   flex: 1; /* Ensures the content takes up the remaining space */
-}
-
-footer.footer {
-  margin-top: auto; /* Ensures footer is pushed to the bottom */
 }
 
 /* Styling for the 'About Me' section */
@@ -101,7 +110,7 @@ footer.footer {
   width: 80%;
   margin: 0 auto;
 }
-.services-container{
+.services-container {
   height: 80vh;
   background: linear-gradient(
     to bottom,
@@ -129,7 +138,6 @@ footer.footer {
   font-size: 2rem;
   font-weight: bold;
 }
-
 
 .project-container {
   height: 100vh;

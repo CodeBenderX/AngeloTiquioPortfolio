@@ -6,7 +6,7 @@ import Home from "../Component/Home.jsx";
 // import Services from "./components/Services";
 import Layout from "../Component/Layout.jsx";
 // import Project from "./components/Project";
-// import Footer from "./components/Footer";
+import Footer from "../Component/Footer.jsx";
 
 const MainRouter = () => {
   return (
@@ -19,7 +19,7 @@ const MainRouter = () => {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/services" element={<Services />} /> */}
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 };
