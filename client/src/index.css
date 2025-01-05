@@ -105,13 +105,6 @@ body {
 }
 .services-container {
   height: 80vh;
-  background: linear-gradient(
-    to bottom,
-    #87ceeb,
-    #4682b4,
-    #1e3a8a,
-    #000000
-  ); /* Blue gradient */
   color: Black;
 }
 
