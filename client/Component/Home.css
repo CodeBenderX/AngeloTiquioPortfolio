@@ -1,128 +1,146 @@
 /* General Styling */
 .home-container {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    color: white;
+  height: 80vh; /* Default height for larger screens */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Animated SVG Background */
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cancer-constellation {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  animation: constellationFloat 15s ease-in-out infinite;
+}
+
+@keyframes constellationFloat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
   }
-  
-  /* Animated SVG Background */
-  .svg-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
+  50% {
+    transform: translate(-48%, -48%) scale(1.05);
   }
-  
-  .cancer-constellation {
-    position: absolute;
-    width: 60%;
-    height: 60%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.2;
-    animation: constellationFloat 15s ease-in-out infinite;
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
-  
-  @keyframes constellationFloat {
-    0% {
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-      transform: translate(-48%, -48%) scale(1.05);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1);
-    }
+}
+
+/* Profile Section */
+.profile-section {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-picture-container {
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.badge {
+  color: whitesmoke !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px;
+  font-size: 1rem !important;
+  font-weight: bold;
+  min-width: 200px; /* Ensure consistent size for smooth transition */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Content Section */
+.content-section {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #ffc107; /* Yellow highlight */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  color: #d1d5db; /* Gray text */
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button-group .btn {
+  border: 2px solid white;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.button-group .btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .home-container {
+    height: auto; /* Set height to auto for mobile screens */
+    padding: 20px; /* Add padding for better spacing on smaller screens */
   }
-  
-  
-  /* Profile Section */
-  .profile-section {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .profile-picture-container {
-    position: relative;
-    width: 300px;
-    height: auto;
-    margin: 0 auto;
-  }
-  
-  .profile-picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .badge-container {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-  }
-  
-  .badge {
-    color: whitesmoke !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 20px;
-    font-size: 1rem !important;
-    font-weight: bold;
-    min-width: 200px; /* Ensure consistent size for smooth transition */
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-  }
-  
-  
-  /* Content Section */
-  .content-section {
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-  }
-  
+
   h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
+    font-size: 2rem; /* Adjust font size for smaller screens */
   }
-  
-  .highlight {
-    color: #ffc107; /* Yellow highlight */
-  }
-  
+
   .subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin: 1rem 0;
-    color: #d1d5db; /* Gray text */
+    font-size: 1.2rem; /* Adjust subtitle size */
   }
-  
+
   .description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.9rem; /* Adjust description size */
   }
-  
-  .button-group .btn {
-    border: 2px solid white;
-    padding: 0.5rem 1.5rem;
-    color: white;
-    transition: all 0.3s ease;
-  }
-  
-  .button-group .btn:hover {
-    background: white;
-    color: black;
-  }
-  
+}

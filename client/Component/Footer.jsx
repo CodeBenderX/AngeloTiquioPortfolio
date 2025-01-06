@@ -8,41 +8,38 @@ export default function Footer() {
       <div className="sub-footer-container">
         <p>© 2024 Angelo Tiquio</p>
 
-        <a
-          href="/"
-        >
-          <img src={Logo} alt="logo" height={40} />
+        <a href="/">
+          <img src={Logo} alt="logo" className="footer-logo" />
         </a>
 
-        <ul className="nav justify-content-end">
-          <li className="nav-item">
-            <a href="/" className="nav-link-footer px-2">
+        <ul className="nav footer-nav">
+          <li className="footer-item">
+            <a href="/" className="nav-link-footer">
               Home
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/about" className="nav-link-footer px-2">
+          <li className="footer-item">
+            <a href="/about" className="nav-link-footer">
               About
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/project" className="nav-link-footer px-2 ">
+          <li className="footer-item">
+            <a href="/project" className="nav-link-footer">
               Projects
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/services" className="nav-link-footer px-2 ">
+          <li className="footer-item">
+            <a href="/services" className="nav-link-footer">
               Services
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/contact" className="nav-link-footer px-2 ">
+          <li className="footer-item">
+            <a href="/contact" className="nav-link-footer">
               Contact
             </a>
           </li>
         </ul>
       </div>
     </div>
-    
   );
 }

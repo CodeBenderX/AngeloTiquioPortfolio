@@ -1,33 +1,82 @@
-/* Footer styles */
+/* Footer container styles */
 .footer-container {
   color: white; /* Text color */
-  margin-top: 0;
-  border-top: 2px solid rgba(255, 255, 255, 0.509);
-  width: 100%; /* Occupy the full width of the body */
-  padding: 20px 0; /* Padding for spacing */
-  position: relative; /* Ensure the footer stays in its proper layout */
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  width: 100%; /* Occupy full width */
+  padding: 20px 0; /* Vertical padding */
+  position: relative;
   bottom: 0; /* Stick the footer at the bottom */
-  margin: 0; /* Remove any extra margin */
+  margin: 0;
+  background-color: transparent; /* Default: no background */
 }
 
+/* Sub-footer container */
 .sub-footer-container {
   width: 80%; /* Content occupies 80% of the width */
-  margin: 0 auto; /* Center the content horizontally */
-  display: flex; /* Use flex for layout control */
+  margin: 0 auto; /* Center horizontally */
+  display: flex; /* Flex layout for alignment */
   flex-wrap: wrap; /* Allow wrapping for responsiveness */
-  justify-content: space-between; /* Space out content evenly */
-  align-items: center; /* Vertically center the content */
+  justify-content: space-between; /* Space out content */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Ensure alignment on mobile */
+}
+
+/* Footer logo */
+.footer-logo {
+  height: 40px;
+  margin-bottom: 10px; /* Spacing for better layout */
+}
+
+/* Navigation list styles */
+.footer-nav {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  justify-content: center; /* Center links */
+}
+
+/* Footer item styles */
+.footer-item {
+  margin: 0 10px; /* Spacing between items */
 }
 
 /* Navigation link footer styles */
 .nav-link-footer {
   text-decoration: none;
-  color:#fff !important;
+  color: #fff !important;
+  font-size: 1rem; /* Standard font size */
 }
 
 .nav-link-footer:hover {
-  color:#0078ff !important;
+  color: #0078ff !important;
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .footer-container {
+    background-color: #004785; /* Add footer background for mobile */
+  }
+
+  .sub-footer-container {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .footer-logo {
+    margin: 10px 0; /* Add spacing around the logo */
+  }
+
+  .footer-nav {
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .footer-item {
+    margin: 5px 0; /* Add spacing between links */
+  }
+}
+
 
 /* Animation for gradient background */
 @keyframes gradient-animation {
@@ -67,7 +116,7 @@
 html,
 body {
   height: auto;
-  margin: 0;
+  margin: 0 auto;
   background: linear-gradient(
     to bottom,
     #87ceeb,
@@ -110,6 +159,7 @@ body {
 
 .services-sub-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -125,6 +175,12 @@ body {
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .services-container {
+    height: auto; /* mobile screens */
+    padding: 20px; /* Added padding for better spacing on smaller screens */
+  }
+}
 
 /* Project Component Styles */
 .project-container {
@@ -242,5 +298,112 @@ body {
 
   .col-md-6 {
     margin-bottom: 20px;
+  }
+}
+
+
+
+/* Layout Styles */
+.container {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Shared Nav Styles */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 0 1rem;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500 !important;
+  font-weight: bolder!important;
+}
+
+.nav-link:hover {
+  color: #0099cc !important;
+  text-decoration: underline;
+}
+
+/* Desktop Nav */
+.desktop {
+  background: none;
+}
+
+/* Mobile Nav */
+.mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 50%;
+  background: rgba(0, 71, 133, 0.85); /* Semi-transparent blue */
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.4s ease-in-out;
+  z-index: 10;
+}
+
+.mobile.show {
+  right: 0;
+}
+
+.mobile .nav-item {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile .nav-link {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Hide menu-toggle for desktops */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: flex !important;
   }
 }
