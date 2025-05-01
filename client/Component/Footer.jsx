@@ -1,5 +1,6 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../src/assets/logo.png";
+import { Link } from "react-router-dom";
 import "../src/index.css";
 
 export default function Footer() {
@@ -8,35 +9,35 @@ export default function Footer() {
       <div className="sub-footer-container">
         <p>© 2024 Angelo Tiquio</p>
 
-        <a href="/">
+        <Link to="/">
           <img src={Logo} alt="logo" className="footer-logo" />
-        </a>
+        </Link>
 
         <ul className="nav footer-nav">
           <li className="footer-item">
-            <a href="/" className="nav-link-footer">
+            <Link to="/" className="nav-link-footer">
               Home
-            </a>
+            </Link>
           </li>
           <li className="footer-item">
-            <a href="/about" className="nav-link-footer">
+            <Link to="/about" className="nav-link-footer">
               About
-            </a>
+            </Link>
           </li>
           <li className="footer-item">
-            <a href="/project" className="nav-link-footer">
+            <Link to="/project" className="nav-link-footer">
               Projects
-            </a>
+            </Link>
           </li>
           <li className="footer-item">
-            <a href="/services" className="nav-link-footer">
+            <Link to="/services" className="nav-link-footer">
               Services
-            </a>
+            </Link>
           </li>
           <li className="footer-item">
-            <a href="/contact" className="nav-link-footer">
+            <Link to="/contact" className="nav-link-footer">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

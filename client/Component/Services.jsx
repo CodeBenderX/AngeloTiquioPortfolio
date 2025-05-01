@@ -2,6 +2,7 @@ import React from "react";
 import service1 from "/src/assets/webDevImage.jpg";
 import service2 from "/src/assets/dataManagement.jpg";
 import service3 from "/src/assets/UIUX.png";
+import { Link } from "react-router-dom";
 import "../src/index.css";
 
 const Services = () => {
@@ -55,12 +56,12 @@ const Services = () => {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                         >
-                          <a
-                            href="/contact"
+                          <Link
+                            to="/contact"
                             style={{ textDecoration: "none", color: "black" }}
                           >
                             Contact Me
-                          </a>
+                          </Link>
                         </button>
                       </div>
                     </div>

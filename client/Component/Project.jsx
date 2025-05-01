@@ -146,9 +146,12 @@ const Project = () => {
               enthusiasts.
             </p>
             <ul>
-              <li>Technologies: ReactJs, BootStrap</li>
+              <li>Technologies: ReactJs, MaterialUI</li>
               <li>Role: Frontend Developer</li>
             </ul>
+            <div className="team" style={{ marginTop: "auto", bottom: "0" }}>
+              <h5></h5>
+            </div>
             <div className="d-flex" style={{ marginTop: "auto", bottom: "0" }}>
               <Link
                 to="https://github.com/CodeBenderX/FreshPlate.git"

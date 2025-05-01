@@ -1,8 +1,8 @@
-//
-/* @vite-ignore */
-import React, { useState, useEffect } from "react";
+
+import React from "react";
 import profilePicture from "../src/assets/portfolioHero.png";
 import TypingBadge from "./TypingBadge";
+import { Link } from "react-router-dom";
 import "../Component/Home.css"; // Import external CSS for the animated background
 
 export default function Home() {
@@ -179,12 +179,12 @@ export default function Home() {
           community development.
         </p>
         <div className="button-group">
-          <a href="/about" className="btn btn-outline-light me-2">
+          <Link to="/about" className="btn btn-outline-light me-2">
             About
-          </a>
-          <a href="/contact" className="btn btn-outline-light">
+          </Link>
+          <Link to="/contact" className="btn btn-outline-light">
             Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </div>
