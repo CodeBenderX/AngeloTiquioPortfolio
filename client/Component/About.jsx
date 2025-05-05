@@ -21,7 +21,7 @@ import {
   faReact,
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import aboutPicture from "../src/assets/aboutMeProfile.png";
+import aboutPicture from "../src/assets/aboutMeProfile.jpg";
 import "../src/index.css";
 
 export default function About() {
